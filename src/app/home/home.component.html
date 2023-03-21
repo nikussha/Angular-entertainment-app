@@ -1,0 +1,52 @@
+<ng-container *ngIf="!(checkinput | async); else filtered">
+  <ng-container *ngIf="AllData | async as data">
+    <div class="home-page-container">
+      <h1>Trending items</h1>
+      <div class="container-for-trending">
+        <div
+          class="single-trending-item"
+          *ngFor="let item of trending"
+          [style.background]="'url(' + item.thumbnail.trending.small + ')'"
+        >
+          <div class="trending-item-information">
+            <p>{{ item.rating }}</p>
+            <p>{{ item.year }}</p>
+            <p>{{ item.category }}</p>
+          </div>
+          <h1>{{ item.title }}</h1>
+          <div class="hover-wrapper">
+            <div class="play">
+              <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 0C6.713 0 0 6.713 0 15c0 8.288 6.713 15 15 15 8.288 0 15-6.712 15-15 0-8.287-6.712-15-15-15Zm-3 21V8l9 6.5-9 6.5Z"
+                  fill="#FFF"
+                />
+              </svg>
+              <p>Play</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1>Recommended for you</h1>
+      <div class="container-for-recommended">
+        <app-single-item
+          *ngFor="let item of data | slice : 1 : 9"
+          [item]="item"
+          [style.background]="'url(' + item.thumbnail.regular.small + ')'"
+        ></app-single-item>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #filtered>
+  <ng-container *ngIf="filteredarr | async as filteredarray">
+    <div class="filtered-container">
+      <app-single-item
+        *ngFor="let item of filteredarray"
+        [item]="item"
+        [style.background]="'url(' + item.thumbnail.regular.small + ')'"
+      ></app-single-item>
+    </div>
+  </ng-container>
+</ng-template>

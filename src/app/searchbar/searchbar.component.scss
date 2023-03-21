@@ -1,0 +1,47 @@
+:host{
+    position: absolute;
+        width: 381px;
+        height: 32px;
+        left: 164px;
+        top: 64px;
+}
+.searchbar-wrapper{
+    display: flex;
+    justify-content: space-between;
+    .wrapper-icon{
+        display: flex;
+        align-items: center;
+    }
+
+    .form-wrapper{
+        width: 85%;
+        .mat-form-field{
+            width: 100%;   
+            input{
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media only screen and(max-width:1000px){
+   :host{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    width: 90%;
+    height: auto;
+    margin: 20px auto;
+   }
+           .form-wrapper {
+               width: 90%!important;
+    
+               .mat-form-field {
+                   width: 100%;
+    
+                   input {
+                       height: 20px;
+                   }
+               }
+           }
+}

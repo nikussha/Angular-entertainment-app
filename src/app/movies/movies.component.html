@@ -1,0 +1,10 @@
+<ng-container *ngIf="$Movies | async as moviesData">
+  <h1 style="color: white">MOVIES</h1>
+  <div class="container-for-movies">
+    <app-single-item
+      *ngFor="let item of moviesData"
+      [item]="item"
+      [style.background]="'url(' + item.thumbnail.regular.small + ')'"
+    ></app-single-item>
+  </div>
+</ng-container>

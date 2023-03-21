@@ -1,0 +1,31 @@
+.main-wrapper{
+    position: relative;
+    width: 100vw;
+    min-height: 100%;
+    background: #10141E;
+    overflow-x: hidden;
+
+    .content-div{
+        width: 90%;
+        position: absolute;
+        top: 20%;
+        left: 160px;
+    }
+}
+
+
+@media only screen and(max-width:1000px){
+    .main-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .content-div{
+            position: absolute;
+            top: 25%;
+            left: 0;
+            margin: 0 auto;
+            width: 100%;
+        }
+    }
+    
+}

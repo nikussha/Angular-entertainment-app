@@ -1,0 +1,14 @@
+<div class="single-item">
+  <div class="info">
+    <p>{{ item.year }}</p>
+    <p>{{ item.rating }}</p>
+    <p>{{ item.category }}</p>
+  </div>
+  <h2>{{ item.title }}</h2>
+  <button (click)="checkifbookmarked()" mat-icon-button>
+    <mat-icon
+      [class]="item.isBookmarked ? 'bookmarked-true' : 'bookmarked-false'"
+      >bookmarked</mat-icon
+    >
+  </button>
+</div>

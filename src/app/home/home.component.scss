@@ -1,0 +1,123 @@
+.home-page-container{
+    width: 100%;
+    height: 100%;
+ h1{
+    &:nth-of-type(2){
+        margin-top: 35px;
+    }
+ }
+    h1{
+        color: white;
+    }
+    .container-for-trending{
+        display: flex;
+        justify-content: space-between;
+        width: 2500px;
+        
+        .single-trending-item{
+            width: 470px;
+            height: 230px;
+            border-radius: 10px;
+            position: relative;
+            .hover-wrapper {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+            
+                &:hover{
+                    opacity: 0.5;
+                    background-color: #282829;
+                    cursor: pointer;
+                    
+                }
+                .play{
+                    padding: 5px;
+                    width: 25%;
+                    height: 20%;
+                    border: 2px solid rgb(200, 187, 187);
+                    margin: 18% auto;                    
+                    border-top-left-radius: 30%;
+                    border-top-right-radius: 30%;
+                    border-bottom-left-radius: 30%;
+                    border-bottom-right-radius: 30%;
+                    background-color: #8a8a8a;
+                   position: relative;
+                   border: none;
+                   svg{
+                    position: absolute;
+                    left: 8%;
+                    top: 23%;
+                   }
+                   p{
+                    position: absolute;
+                    top: 28%;
+                    right: 20%;
+                    color: white;
+                    font-size: 20px;
+                   }
+                
+                }
+            }
+            .trending-item-information{
+                display: flex;
+                justify-content: space-between;
+                width: 40%;
+                position: absolute;
+                bottom: 35px;
+                left: 15px;
+                p{
+                    font-weight: 300;
+                        font-size: 15px;
+                        line-height: 19px;
+                        color: #FFFFFF;
+                        mix-blend-mode: normal;
+                        opacity: 0.75;
+                }
+            }
+            h1{
+                position: absolute;
+                bottom: 2px;
+                left: 15px;
+                font-style: normal;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 30px;                
+                    color: #FFFFFF;
+            }
+        }
+    }
+
+    .container-for-recommended{
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 2%;
+            
+    }
+}
+
+.filtered-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width:1000px){
+    .home-page-container{
+        width: 100%;
+        .container-for-recommended{
+            justify-content: space-around;
+        }
+    }
+   .filtered-container{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+   justify-content: space-around;
+   }
+}
+

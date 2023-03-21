@@ -1,0 +1,12 @@
+.container-for-series{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+
+@media only screen and(max-width:1000px){
+    .container-for-series{
+        justify-content: space-around;
+    }
+}

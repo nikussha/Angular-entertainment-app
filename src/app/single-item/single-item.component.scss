@@ -1,0 +1,135 @@
+:host{
+    margin: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px;
+}
+
+.single-item{
+    position: relative;
+    width: 280px;
+    height: 200px;
+  
+   
+    .info{
+        position: absolute;
+        display: flex;
+        width: 120px;
+        justify-content: space-between;
+        bottom: -35px;
+        p{
+            font-family: 'Outfit';
+                font-weight: 300;
+                font-size: 13px;
+                line-height: 16px;
+            
+            
+                color: #FFFFFF;
+            
+                mix-blend-mode: normal;
+                opacity: 0.75;
+        }
+    }
+    h2{
+        position: absolute;
+        bottom: -65px;
+        font-family: 'Outfit';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 23px;
+        
+        
+            /* Pure White */
+        
+            color: #FFFFFF;
+    }
+    button{
+        position: absolute;
+        right: 7px;
+    }
+
+    
+.bookmarked-true{   
+            background: #10141E;
+            mix-blend-mode: normal;
+            opacity: 0.8;
+            border-radius: 50%;
+            color:white;
+            padding: 5px;
+
+}
+.bookmarked-false {
+        background: #10141E;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            border-radius: 50%;
+            padding: 5px;
+       
+}
+
+}
+
+
+@media only screen and(max-width:675px){
+    :host{
+        background-size: cover;
+        margin: 0;
+        margin-bottom: 50px;
+        margin-right: 5px;
+    }
+    .single-item{
+        width: 220px;
+        height: 220px;
+    }
+}
+@media only screen and(max-width:500px){
+    :host{
+        background-size: cover;
+        margin: 0;
+        margin-bottom: 50px;
+        margin-right: 5px;
+    }
+    .single-item{
+        width: 180px;
+        height: 180px;
+    }
+
+}
+@media only screen and(max-width:410px){
+    :host{
+        background-size: cover;
+        margin: 0;
+        margin-bottom: 70px;
+        margin-right: 2px;
+    }
+    .single-item{
+        width: 140px;
+        height: 140px;
+        .info{
+            margin-bottom: 15px;
+        }
+        h2{ 
+            font-size: 14px;
+        }
+    }
+
+}
+@media only screen and(max-width:320px){
+    :host{
+        background-size: cover;
+        margin: 0;
+        margin-bottom: 70px;
+        margin-right: 2px;
+    }
+    .single-item{
+       width: 80vw;
+       height: 150px;
+       align-items: center;
+        .info{
+            margin-bottom: 15px;
+        }
+        h2{ 
+            font-size: 14px;
+        }
+    }
+
+}

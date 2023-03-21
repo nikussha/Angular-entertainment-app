@@ -1,0 +1,16 @@
+/* You can add global s to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Playfair+Display&family=Roboto&display=swap');
+
+
+
+html, body { height: 100% ;background: #10141E; 
+    p,h2{
+        font-family: 'Montserrat', sans-serif!important;
+    }
+    h1{
+        letter-spacing: 1px!important;
+        font-family: 'Montserrat', sans-serif !important;
+    }
+} 
+body { margin: 0; }

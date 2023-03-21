@@ -1,0 +1,10 @@
+<ng-container *ngIf="Bookmarks | async as bookmarkedarr">
+  <h1 style="color: white">Bookmarked</h1>
+  <div class="bookmarked-container">
+    <app-single-item
+      [style.background]="'url(' + item.thumbnail.regular.small + ')'"
+      *ngFor="let item of bookmarkedarr"
+      [item]="item"
+    ></app-single-item>
+  </div>
+</ng-container>

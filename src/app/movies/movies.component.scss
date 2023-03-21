@@ -1,0 +1,13 @@
+.container-for-movies{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15px;
+}
+
+
+
+@media only screen and(max-width:1000px) {
+    .container-for-movies{
+        justify-content: space-around;
+    }
+}

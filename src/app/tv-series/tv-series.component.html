@@ -1,0 +1,10 @@
+<ng-container *ngIf="displaySeries$ | async as series">
+  <h1 style="color: white">TV-SERIES</h1>
+  <div class="container-for-series">
+    <app-single-item
+      [style.background]="'url(' + item.thumbnail.regular.small + ')'"
+      *ngFor="let item of series"
+      [item]="item"
+    ></app-single-item>
+  </div>
+</ng-container>
